@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuscarISBN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eg-ST-8VO">
+                                <rect key="frame" x="203" y="20" width="194" height="42"/>
+                                <color key="backgroundColor" red="0.2921607511" green="0.59992910330000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="LMy-eV-ZHv"/>
+                                    <constraint firstAttribute="height" constant="42" id="pm4-C4-JCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Resultado en JSON" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-1y-vUh">
+                                <rect key="frame" x="20" y="78" width="560" height="424"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="424" id="Qp7-4s-Vdi"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-WB-OLW">
+                                <rect key="frame" x="240" y="523" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="57T-dA-3ea"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="EOv-FX-mxS"/>
+                                    <constraint firstAttribute="height" constant="30" id="tCi-hi-pDw"/>
+                                </constraints>
+                                <state key="normal" title="Insertar ISBN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="57T-dA-3ea"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="HWO-v7-vDE" kind="popoverPresentation" identifier="entrarISBNView" popoverAnchorView="NhS-WB-OLW" id="aJu-b2-cuv">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NhS-WB-OLW" firstAttribute="top" secondItem="Dax-1y-vUh" secondAttribute="bottom" constant="21" id="0eI-Or-qhD"/>
+                            <constraint firstItem="Dax-1y-vUh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4ix-ge-FGs"/>
+                            <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="NhS-WB-OLW" secondAttribute="centerX" id="THy-UR-Ted"/>
+                            <constraint firstItem="Dax-1y-vUh" firstAttribute="top" secondItem="1eg-ST-8VO" secondAttribute="bottom" constant="16" id="Yhg-pY-Zyc"/>
+                            <constraint firstItem="1eg-ST-8VO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="a7H-lh-hok"/>
+                            <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djv-Ip-QQn"/>
+                            <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="Dax-1y-vUh" secondAttribute="centerX" id="ods-xZ-G3J"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NhS-WB-OLW" secondAttribute="bottom" constant="47" id="sO6-5F-jbc"/>
+                            <constraint firstItem="NhS-WB-OLW" firstAttribute="top" secondItem="Dax-1y-vUh" secondAttribute="bottom" constant="21" id="u44-pd-Z0t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="verISBN" destination="1eg-ST-8VO" id="rMY-vB-MxE"/>
+                        <outlet property="verResultado" destination="Dax-1y-vUh" id="CCQ-Do-zQ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+        <!--EntrarISBN-->
+        <scene sceneID="c76-sx-GLw">
+            <objects>
+                <viewController id="HWO-v7-vDE" customClass="EntrarISBN" customModule="BuscarISBN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ioe-t9-7mA"/>
+                        <viewControllerLayoutGuide type="bottom" id="GHR-Pg-hsQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pbb-sD-CWF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entrar el ISBN" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-Ix-fOf">
+                                <rect key="frame" x="64" y="84" width="204" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwj-Kc-KqS">
+                                <rect key="frame" x="155" y="146" width="48" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscarISBN:" destination="HWO-v7-vDE" eventType="touchUpInside" id="taH-Zg-Z0f"/>
+                                    <segue destination="Ci0-hp-T1s" kind="unwind" identifier="saveISBN" unwindAction="entrarISBNView:" id="qmc-UX-jyC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="buscarButton" destination="Qwj-Kc-KqS" id="fvU-91-31O"/>
+                        <outlet property="entrarISBNText" destination="h2w-Ix-fOf" id="0xv-b5-gpv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrH-Yi-x4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ci0-hp-T1s" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="387"/>
+        </scene>
+    </scenes>
+</document>
