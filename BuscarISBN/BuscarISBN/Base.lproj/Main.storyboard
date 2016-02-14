@@ -96,13 +96,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entrar el ISBN" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-Ix-fOf">
-                                <rect key="frame" x="64" y="84" width="204" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entrar el ISBN" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-Ix-fOf">
+                                <rect key="frame" x="64" y="84" width="472" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwj-Kc-KqS">
-                                <rect key="frame" x="155" y="146" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwj-Kc-KqS">
+                                <rect key="frame" x="276" y="146" width="48" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Buscar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,8 +112,27 @@
                                     <segue destination="Ci0-hp-T1s" kind="unwind" identifier="saveISBN" unwindAction="entrarISBNView:" id="qmc-UX-jyC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7r-Ns-c8B">
+                                <rect key="frame" x="558" y="84" width="36" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="borrarNumero:" destination="HWO-v7-vDE" eventType="touchUpInside" id="Rvh-Dx-9h5"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qwj-Kc-KqS" firstAttribute="centerX" secondItem="pbb-sD-CWF" secondAttribute="centerX" id="0q6-kJ-Whm"/>
+                            <constraint firstItem="h2w-Ix-fOf" firstAttribute="leading" secondItem="pbb-sD-CWF" secondAttribute="leadingMargin" constant="44" id="3IB-1X-LO9"/>
+                            <constraint firstItem="h2w-Ix-fOf" firstAttribute="centerX" secondItem="pbb-sD-CWF" secondAttribute="centerX" id="OXa-43-60b"/>
+                            <constraint firstItem="h2w-Ix-fOf" firstAttribute="top" secondItem="G7r-Ns-c8B" secondAttribute="top" id="SVL-kt-kfR"/>
+                            <constraint firstItem="G7r-Ns-c8B" firstAttribute="leading" secondItem="h2w-Ix-fOf" secondAttribute="trailing" constant="22" id="hkr-zQ-r7z"/>
+                            <constraint firstItem="h2w-Ix-fOf" firstAttribute="top" secondItem="ioe-t9-7mA" secondAttribute="bottom" constant="64" id="ksc-S2-Cxx"/>
+                            <constraint firstItem="Qwj-Kc-KqS" firstAttribute="top" secondItem="h2w-Ix-fOf" secondAttribute="bottom" constant="32" id="oKK-Fy-noa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buscarButton" destination="Qwj-Kc-KqS" id="fvU-91-31O"/>

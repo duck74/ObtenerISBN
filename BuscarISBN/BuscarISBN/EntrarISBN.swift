@@ -16,6 +16,9 @@ class EntrarISBN: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buscarButton: UIButton!
     @IBOutlet weak var entrarISBNText: UITextField!
     
+    @IBAction func borrarNumero(sender: AnyObject) {
+        entrarISBNText.text = ""
+    }
     @IBAction func buscarISBN(sender: AnyObject) {
         
             ISBNbuscar = entrarISBNText.text
@@ -31,6 +34,7 @@ class EntrarISBN: UIViewController, UITextFieldDelegate {
         initializeTextField()
         buscarButton.enabled = false
         buscarButton.alpha = 0.50
+        
     }
     
     func initializeTextField(){
