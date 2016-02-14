@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuscarISBN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="BuscarISBN" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,40 +39,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-WB-OLW">
-                                <rect key="frame" x="240" y="523" width="120" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="57T-dA-3ea"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="EOv-FX-mxS"/>
-                                    <constraint firstAttribute="height" constant="30" id="tCi-hi-pDw"/>
-                                </constraints>
-                                <state key="normal" title="Insertar ISBN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="57T-dA-3ea"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="HWO-v7-vDE" kind="popoverPresentation" identifier="entrarISBNView" popoverAnchorView="NhS-WB-OLW" id="aJu-b2-cuv">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLz-qk-Q5j">
+                                <rect key="frame" x="222" y="523" width="156" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-WB-OLW">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="0G0-4M-uYG"/>
+                                            <constraint firstAttribute="width" constant="91" id="57T-dA-3ea"/>
+                                        </constraints>
+                                        <state key="normal" title="Insertar ISBN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="57T-dA-3ea"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="HWO-v7-vDE" kind="popoverPresentation" identifier="entrarISBNView" popoverAnchorView="NhS-WB-OLW" id="aJu-b2-cuv">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAs-L6-14S">
+                                        <rect key="frame" x="120" y="0.0" width="36" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="borrarTexto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hY3-zK-a98"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NhS-WB-OLW" firstAttribute="top" secondItem="Dax-1y-vUh" secondAttribute="bottom" constant="21" id="0eI-Or-qhD"/>
                             <constraint firstItem="Dax-1y-vUh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4ix-ge-FGs"/>
-                            <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="NhS-WB-OLW" secondAttribute="centerX" id="THy-UR-Ted"/>
+                            <constraint firstItem="RLz-qk-Q5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TMc-rM-orc"/>
                             <constraint firstItem="Dax-1y-vUh" firstAttribute="top" secondItem="1eg-ST-8VO" secondAttribute="bottom" constant="16" id="Yhg-pY-Zyc"/>
                             <constraint firstItem="1eg-ST-8VO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="a7H-lh-hok"/>
                             <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djv-Ip-QQn"/>
+                            <constraint firstItem="RLz-qk-Q5j" firstAttribute="top" secondItem="Dax-1y-vUh" secondAttribute="bottom" constant="21" id="jiM-p4-6qy"/>
                             <constraint firstItem="1eg-ST-8VO" firstAttribute="centerX" secondItem="Dax-1y-vUh" secondAttribute="centerX" id="ods-xZ-G3J"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NhS-WB-OLW" secondAttribute="bottom" constant="47" id="sO6-5F-jbc"/>
-                            <constraint firstItem="NhS-WB-OLW" firstAttribute="top" secondItem="Dax-1y-vUh" secondAttribute="bottom" constant="21" id="u44-pd-Z0t"/>
                         </constraints>
                     </view>
                     <connections>

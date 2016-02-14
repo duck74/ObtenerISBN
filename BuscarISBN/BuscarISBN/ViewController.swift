@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var insertarISBN: UIButton!
     
+    @IBAction func borrarTexto(sender: AnyObject) {
+        verResultado.text = "Resultado en JSON"
+    }
     @IBAction func entrarISBNView(segue: UIStoryboardSegue) {
         
         if let isbnViewController = segue.sourceViewController as? EntrarISBN {
